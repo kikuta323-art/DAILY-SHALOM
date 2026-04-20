@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINEテンプレート — Daily Shalom 2026.04.20</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f0f0f0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  h2 {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #999;
+    text-align: center;
+  }
+  .bubble {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    font-size: 14px;
+    line-height: 2;
+    color: #2c2c2c;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    white-space: pre-wrap;
+    word-break: break-word;
+    width: 100%;
+    max-width: 420px;
+  }
+  .copy-btn {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 12px;
+    background: #1a2744;
+    color: #e8d5a3;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .copy-btn:active { opacity: 0.7; }
+</style>
+</head>
+<body>
+
+<h2>📱 LINEテンプレート — 2026.04.20</h2>
+
+<div class="bubble" id="msg">🕊 Daily Shalom｜2026.4.20
+
+「あなたの年は、代々限りなく続きます。」詩篇102:24
+
+"Your years are throughout all generations." Ps.102:24
+
+🔗 https://claude.ai/public/artifacts/58b04dcf-b8e3-4121-bd98-083c5fdc5718</div>
+
+<button class="copy-btn" onclick="copyText()">📋 コピーする</button>
+
+<script>
+function copyText() {
+  const el = document.getElementById('msg');
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.nextElementSibling;
+    btn.textContent = '✅ コピーしました！';
+    setTimeout(() => { btn.textContent = '📋 コピーする'; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
