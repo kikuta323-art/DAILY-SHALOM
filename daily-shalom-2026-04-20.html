@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Shalom — 詩篇 102:24-25, 28</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --gold: #c9a84c;
+    --gold-light: #e8d5a3;
+    --cream: #faf6ee;
+    --cream-dark: #f0e9d8;
+    --text: #2c2c2c;
+    --text-soft: #5a5040;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: var(--cream);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  .page { max-width: 680px; margin: 0 auto; padding: 0 0 60px; }
+
+  .header {
+    background: var(--navy);
+    padding: 44px 40px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.08);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .date-label {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--gold-light);
+    opacity: 0.75;
+    margin-bottom: 10px;
+  }
+  .header-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .reference {
+    font-family: 'EB Garamond', serif;
+    font-size: 28px;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .reference-en {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--gold-light);
+    opacity: 0.8;
+    margin-top: 6px;
+  }
+
+  .section { padding: 36px 40px; border-bottom: 1px solid var(--cream-dark); }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gold-light);
+    opacity: 0.5;
+  }
+
+  .lang-badge {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold-light);
+    padding: 2px 9px;
+    border-radius: 2px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .scripture-jp {
+    font-size: 15.5px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 2.1;
+    padding-left: 16px;
+    border-left: 2px solid var(--gold);
+    margin-bottom: 8px;
+  }
+  .scripture-en {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-soft);
+    line-height: 2;
+    padding-left: 16px;
+    border-left: 2px solid var(--gold-light);
+    margin-bottom: 8px;
+  }
+  .ref-tag {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px dashed var(--gold-light);
+    margin: 22px 0;
+    opacity: 0.6;
+  }
+
+  .meditation-jp { font-size: 14.5px; line-height: 2; color: var(--text); margin-bottom: 10px; }
+  .meditation-en {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--text-soft);
+    line-height: 2;
+  }
+  .meditation-jp p, .meditation-en p { margin-bottom: 12px; }
+
+  .bullet-group { margin: 14px 0 4px; }
+  .bullet-item {
+    padding: 12px 0 12px 20px;
+    border-bottom: 1px solid var(--cream-dark);
+    position: relative;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .bullet-item:last-child { border-bottom: none; }
+  .bullet-item::before {
+    content: '✦';
+    position: absolute;
+    left: 0; top: 15px;
+    color: var(--gold);
+    font-size: 10px;
+  }
+  .bullet-title {
+    font-weight: 500;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 4px;
+    font-style: normal;
+  }
+
+  .prayer-block {
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 26px 30px;
+    margin-bottom: 14px;
+  }
+  .prayer-lang {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-family: 'EB Garamond', serif;
+  }
+  .prayer-text-jp {
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+    line-height: 2.1;
+    font-weight: 300;
+  }
+  .prayer-text-en {
+    font-family: 'EB Garamond', serif;
+    font-size: 15.5px;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    line-height: 2;
+  }
+
+  .invitation-box {
+    border: 1px solid var(--gold-light);
+    border-left: 3px solid var(--gold);
+    border-radius: 2px;
+    padding: 26px 28px;
+    background: linear-gradient(135deg, var(--cream-dark), var(--cream));
+  }
+  .invitation-jp {
+    font-size: 15px;
+    color: var(--navy);
+    font-weight: 400;
+    line-height: 2;
+    margin-bottom: 18px;
+  }
+  .invitation-en {
+    font-family: 'EB Garamond', serif;
+    font-size: 15.5px;
+    font-style: italic;
+    color: var(--text-soft);
+    line-height: 1.9;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 30px 40px 0;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-family: 'EB Garamond', serif;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 480px) {
+    .header { padding: 32px 20px 26px; }
+    .section { padding: 26px 20px; }
+    .reference { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="date-label">2026年4月20日（月）· Monday, April 20, 2026</div>
+    <div class="header-title">🕊 Daily Shalom</div>
+    <div class="reference">詩篇 102:24–25, 28</div>
+    <div class="reference-en">Psalms 102:24–25, 28</div>
+  </div>
+
+  <!-- ① Scripture -->
+  <div class="section">
+    <div class="section-label">① 御言葉 · Scripture</div>
+
+    <div class="lang-badge">日本語 · 新改訳2017</div>
+    <div class="scripture-jp">
+      「わが神よ、私をわたしの年の半ばに取らないでください。<br>
+      あなたの年は、代々限りなく続きます。<br>
+      あなたは古に、地の基を置かれました。<br>
+      天もあなたの御手のわざです。<br>
+      ……<br>
+      あなたのしもべたちの子らは住み続け、<br>
+      彼らの子孫はあなたの御前に確かに立てられます。」
+    </div>
+    <span class="ref-tag">— 詩篇 102:24-25, 28 新改訳2017</span>
+
+    <hr class="divider">
+
+    <div class="lang-badge">English · NASB1995</div>
+    <div class="scripture-en">
+      "O my God, do not take me away in the midst of my days,<br>
+      Your years are throughout all generations.<br>
+      Of old You founded the earth,<br>
+      And the heavens are the work of Your hands.<br>
+      ……<br>
+      The children of Your servants will continue,<br>
+      And their descendants will be established before You."
+    </div>
+    <span class="ref-tag">— Psalms 102:24-25, 28 NASB1995</span>
+  </div>
+
+  <!-- ② Meditation -->
+  <div class="section">
+    <div class="section-label">② 黙想 · Meditation <span style="font-size:9px;color:var(--text-soft);letter-spacing:0.08em;text-transform:none;margin-left:4px;">— Copilot作成</span></div>
+
+    <div class="lang-badge">日本語</div>
+    <div class="meditation-jp">
+      <p>静かな夜明けの前に、そっと置かれたような御言葉です。</p>
+      <p>詩篇102篇のこの箇所の核心は、「人の短さ」と「神の永遠さ」が触れ合うところに生まれる祈りです。<br>
+      弱さを隠さず神に差し出しながら、その祈りは絶望ではなく、永遠の方への深い信頼へと向かっていく。</p>
+      <div class="bullet-group">
+        <div class="bullet-item">
+          <span class="bullet-title">「まだ途中なのです」という率直な叫び</span>
+          「わたしの年の半ばに取らないでください」——飾りのない魂の声。神はその叫びを遠ざけません。むしろ、そこへ近づいてくる方です。
+        </div>
+        <div class="bullet-item">
+          <span class="bullet-title">「あなたの年は、代々限りなく続く」</span>
+          人の時間は途切れやすい。けれど神の時間は枯れません。どんな朝を迎えていても、その思いは永遠の方の御手のひらの中に置かれています。
+        </div>
+        <div class="bullet-item">
+          <span class="bullet-title">「御前に確かに立てられる」</span>
+          28節の最後の言葉が静かに輝きます。何が残るかではなく、誰の御前に立ち続けるか。毎朝こうして御言葉の前に座ること——それ自体がすでに「御前に確かに立てられる」歩みです。
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="lang-badge">English</div>
+    <div class="meditation-en">
+      <p>Like something gently placed before the quiet of dawn.</p>
+      <p>The heart of this passage is the prayer born where human brevity and divine eternity touch.<br>
+      Weakness is offered to God unguarded — yet the prayer moves not toward despair, but toward deep trust in the Eternal One.</p>
+      <div class="bullet-group">
+        <div class="bullet-item">
+          <span class="bullet-title">"Do not take me away in the midst of my days"</span>
+          An unadorned cry: "I am still in the middle." God does not turn away from such cries. He draws near to them.
+        </div>
+        <div class="bullet-item">
+          <span class="bullet-title">"Your years are throughout all generations"</span>
+          Human time breaks easily. But God's time does not run dry. Whatever you carry into this morning, it rests in the palm of the One whose years do not end.
+        </div>
+        <div class="bullet-item">
+          <span class="bullet-title">"Established before You"</span>
+          The final phrase of verse 28 glows quietly. Not what we leave behind — but before Whom we continue to stand. Sitting with the Word each morning is already a life established before Him.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ Prayer -->
+  <div class="section">
+    <div class="section-label">③ 祈り · Prayer</div>
+
+    <div class="prayer-block">
+      <div class="prayer-lang">🇯🇵 日本語</div>
+      <div class="prayer-text-jp">
+        天の父よ、<br>
+        「まだ途中です」と、正直に言える関係をありがとうございます。<br>
+        わたしの時間は限られていても、<br>
+        あなたの時間は尽きることなく、すべての世代を包んでいます。<br>
+        その広さの中に今日の一日を委ね、<br>
+        御前に静かに立ち続けることができますように。<br>
+        しもべたちの子孫のように、私の歩みを<br>
+        あなたの御前に確かに立て続けてください。<br>
+        イエス・キリストの御名によって。アーメン。
+      </div>
+    </div>
+
+    <div class="prayer-block">
+      <div class="prayer-lang">🇺🇸 English</div>
+      <div class="prayer-text-en">
+        Heavenly Father,<br>
+        Thank You that I can come to You honestly and say, "I am still in the middle."<br>
+        My time is limited, yet Your years encompass every generation<br>
+        without ever running dry.<br>
+        I entrust this day into that vastness,<br>
+        and ask that I may stand quietly before You — now, and always.<br>
+        Establish my steps before You,<br>
+        as You have promised to the children of Your servants.<br>
+        In the name of Jesus Christ. Amen.
+      </div>
+    </div>
+  </div>
+
+  <!-- ④ God's Invitation -->
+  <div class="section" style="border-bottom:none;">
+    <div class="section-label">④ 神様からの招き · God's Invitation</div>
+
+    <div class="invitation-box">
+      <div class="invitation-jp">
+        今日、あなたの「途中」をそのまま神に差し出してください。<br>
+        御前に立っていること——それだけで十分です。
+      </div>
+      <div class="invitation-en">
+        Bring your "unfinished" to God just as it is today.<br>
+        Standing before Him — that is already enough.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Shalom Investment Academy · Daily Shalom · 2026</div>
+
+</div>
+</body>
+</html>
